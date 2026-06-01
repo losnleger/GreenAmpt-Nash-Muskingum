@@ -1,0 +1,6 @@
+numpy>=2.0
+pandas>=2.0
+scipy>=1.13
+matplotlib>=3.8
+mealpy==3.0.2
+openpyxl>=3.1

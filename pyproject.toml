@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greenampt-nash-muskingum"
+version = "0.1.0"
+description = "A Green-Ampt, Nash unit hydrograph, and Muskingum routing rainfall-runoff research prototype."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "Losn" }
+]
+keywords = ["hydrology", "rainfall-runoff", "green-ampt", "nash", "muskingum", "calibration"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.0",
+  "scipy>=1.13",
+  "matplotlib>=3.8",
+  "mealpy==3.0.2",
+  "openpyxl>=3.1",
+]
+
+[project.scripts]
+gnm-generate-example = "generate_example_data:main"
+gnm-calibrate = "calibrate:main"
+gnm-forecast = "forecast:main"
+
+[tool.setuptools]
+py-modules = ["calibrate", "forecast", "generate_example_data", "train"]
+packages = ["core"]
+
+[tool.setuptools.package-data]
+"*" = ["dataset/*.csv", "docs/*.md", "skills/**/*.md", "skills/**/*.py", "skills/**/*.yaml"]

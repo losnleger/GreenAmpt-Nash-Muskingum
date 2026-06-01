@@ -1,0 +1,4 @@
+interface:
+  display_name: "GreenAmpt Nash Muskingum"
+  short_description: "Run hydrology model workflows."
+  default_prompt: "Use this skill to install the GreenAmpt-Nash-Muskingum project, generate example data, calibrate, forecast, verify outputs, and report limitations honestly."
